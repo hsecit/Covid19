@@ -1,9 +1,13 @@
 package com.example.covid19.ui.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -28,9 +32,25 @@ public class HomeFragment extends Fragment {
         final TextView cases = root.findViewById(R.id.num_cases);
         final TextView death= root.findViewById(R.id.num_death);
         final TextView recovered = root.findViewById(R.id.num_recovred);
+        final ImageView imageView = root.findViewById(R.id.image_src);
+        Button go_site = root.findViewById(R.id.go_site);
+
+        imageView.setImageResource(R.drawable.docotor_advice);
 
         Covid covid = new Covid();
         covid.getGlobalStatus(cases,death,recovered);
+
+
+        go_site.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url_sante = "https://www.sante.gov.ma/";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url_sante));
+                startActivity(intent);
+
+            }
+        });
 
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
