@@ -1,9 +1,17 @@
 package com.example.covid19.covidapi.bean;
+
+import androidx.core.app.ServiceCompat;
+
+import com.google.gson.annotations.SerializedName;
+
 public class Countrie {
+    //{"country":"North America","cases":725968,"todayCases":1408,"deaths":36785,"todayDeaths":76,"recovered":70683,
+    // "active":618500,"critical":14459,"casesPerOneMillion":0,"deathsPerOneMillion":0,"totalTests":0,"testsPerOneMillion":0},
+
     private String country;
     private String cases;
     private String todayCases;
-    private String death;
+    private String deaths;
     private String todayDeaths;
     private String recovered;
     private String active;
@@ -17,7 +25,7 @@ public class Countrie {
         this.country = country;
         this.cases = cases;
         this.todayCases = todayCases;
-        this.death = death;
+        this.deaths = death;
         this.todayDeaths = todayDeaths;
         this.recovered = recovered;
         this.active = active;
@@ -41,7 +49,7 @@ public class Countrie {
     }
 
     public String getDeath() {
-        return death;
+        return deaths;
     }
 
     public String getTodayDeaths() {
@@ -89,7 +97,7 @@ public class Countrie {
     }
 
     public void setDeath(String death) {
-        this.death = death;
+        this.deaths = death;
     }
 
     public void setTodayDeaths(String todayDeaths) {
@@ -122,5 +130,23 @@ public class Countrie {
 
     public void setTestsPerOneMillion(String testsPerOneMillion) {
         this.testsPerOneMillion = testsPerOneMillion;
+    }
+
+    @Override
+    public String toString() {
+        return "Countrie{" +
+                "country='" + country + '\'' +
+                ", cases='" + cases + '\'' +
+                ", todayCases='" + todayCases + '\'' +
+                ", deaths='" + deaths + '\'' +
+                ", todayDeaths='" + todayDeaths + '\'' +
+                ", recovered='" + recovered + '\'' +
+                ", active='" + active + '\'' +
+                ", critical='" + critical + '\'' +
+                ", casesPerOneMillion='" + casesPerOneMillion + '\'' +
+                ", deathsPerOneMillion='" + deathsPerOneMillion + '\'' +
+                ", totalTests='" + totalTests + '\'' +
+                ", testsPerOneMillion='" + testsPerOneMillion + '\'' +
+                '}';
     }
 }
