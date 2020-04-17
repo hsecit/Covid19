@@ -7,13 +7,14 @@
     tools:context=".ui.home.HomeFragment">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="24dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,8 +24,10 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="117dp"
-            android:layout_gravity="center">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/text_home"
@@ -32,15 +35,15 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="8dp"
                 android:paddingTop="5dp"
-                android:text="Coronavirus cases"
+                android:text="Coronavirus "
                 android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/num_cases"
-                android:layout_width="131dp"
-                android:layout_height="37dp"
-                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="2034"
                 android:textColor="#FFEB3B"
@@ -50,13 +53,15 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="156dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/num_death"
-                android:layout_width="131dp"
-                android:layout_height="37dp"
-                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="13"
                 android:textColor="#F44336"
@@ -76,13 +81,15 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="190dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/num_recovred"
-                android:layout_width="131dp"
-                android:layout_height="37dp"
-                android:layout_marginTop="50dp"
+                android:layout_width="407dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:text="6045"
                 android:textColor="#4CAF50"
@@ -98,6 +105,17 @@
                 android:text="Recovred"
                 android:textColor="#000000"
                 android:textSize="24sp" />
+
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="395dp"
+            android:layout_height="373dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

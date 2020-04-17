@@ -37,7 +37,7 @@ public class DashboardFragment extends Fragment {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        //final TextView textView = root.findViewById(R.id.text_dashboard);
        final RecyclerView recyclerView = root.findViewById(R.id.list_covid);
 
 
@@ -76,12 +76,7 @@ public class DashboardFragment extends Fragment {
 
 
 
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 }
