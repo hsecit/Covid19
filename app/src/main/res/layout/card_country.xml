@@ -24,7 +24,7 @@
             android:paddingLeft="10dp">
 
             <TextView
-                android:id="@+id/county"
+                android:id="@+id/county1"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:paddingLeft="10dp"
@@ -34,10 +34,10 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/black" />
 
             <TextView
-                android:id="@+id/info_cases"
+                android:id="@+id/info_cases1"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:paddingLeft="10dp"
@@ -45,7 +45,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/info_death"
+                android:id="@+id/info_death1"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:paddingLeft="10dp"
@@ -53,7 +53,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/info_critical"
+                android:id="@+id/info_critical1"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
                 android:paddingLeft="10dp"

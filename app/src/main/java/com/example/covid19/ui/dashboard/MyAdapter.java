@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.covid19.R;
-import com.example.covid19.covidapi.Covid;
 import com.example.covid19.covidapi.bean.Countrie;
 
 import java.util.List;
@@ -48,10 +47,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView country, cases , death, recover_critical ;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            country = itemView.findViewById(R.id.county);
-           cases=itemView.findViewById(R.id.info_cases);
-           death = itemView.findViewById(R.id.info_death);
-           recover_critical = itemView.findViewById(R.id.info_critical);
+            country = itemView.findViewById(R.id.county1);
+           cases=itemView.findViewById(R.id.info_cases1);
+           death = itemView.findViewById(R.id.info_death1);
+           recover_critical = itemView.findViewById(R.id.info_critical1);
 
 
         }
