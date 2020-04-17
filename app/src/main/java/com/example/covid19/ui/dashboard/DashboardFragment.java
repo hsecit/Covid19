@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.covid19.R;
+import com.example.covid19.covidapi.Covid;
 
 public class DashboardFragment extends Fragment {
 
@@ -24,6 +25,9 @@ public class DashboardFragment extends Fragment {
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
         final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView listt= root.findViewById(R.id.listc);
+        Covid covid = new Covid();
+        covid.getCountrie(listt);
         dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

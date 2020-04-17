@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.covid19.R;
+import com.example.covid19.covidapi.Covid;
 
 public class HomeFragment extends Fragment {
 
@@ -24,6 +25,13 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
+        final TextView cases = root.findViewById(R.id.num_cases);
+        final TextView death= root.findViewById(R.id.num_death);
+        final TextView recovered = root.findViewById(R.id.num_recovred);
+
+        Covid covid = new Covid();
+        covid.getGlobalStatus(cases,death,recovered);
+
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
