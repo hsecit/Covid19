@@ -5,75 +5,109 @@
     android:id="@+id/search_bar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/searchView"
-            android:layout_width="306dp"
-            android:layout_height="53dp"
-            android:background="#FFFFFF"
-            android:drawableLeft="@android:drawable/ic_menu_search"
-            android:drawablePadding="2dp"
-            android:paddingLeft="5dp"
-            android:queryHint="Morroco ,Italy"
-            android:text="Morocco">
-
-        </EditText>
-
-        <Button
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="valider"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="419dp"
-        android:layout_height="180dp"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.099">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/info_cases1"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:paddingLeft="10dp"
-            android:text="cases: 25434 | today : 74 | active 624 |"
-            android:textSize="18sp" />
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/info_death1"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:paddingLeft="10dp"
-            android:text="death: 25434 | today : 35"
-            android:textSize="18sp" />
+            <EditText
+                android:id="@+id/searchView"
+                android:layout_width="306dp"
+                android:layout_height="53dp"
+                android:background="#FFFFFF"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="2dp"
+                android:paddingLeft="5dp"
+                android:queryHint="Morroco ,Italy"
+                android:text="Morocco">
 
-        <TextView
-            android:id="@+id/info_critical1"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:paddingLeft="10dp"
-            android:text="recovered: 25434 | Critical : 74 "
-            android:textSize="18sp" />
+            </EditText>
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="valider"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/county"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/info_cases1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="cases: 25434 | today : 74 | active 624 |"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/info_death1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="death: 25434 | today : 35"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/info_critical1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="recovered: 25434 | Critical : 74 "
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

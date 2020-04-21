@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
         go_site.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url_sante = "https://www.sante.gov.ma/";
+                String url_sante = "http://www.sante.gov.ma/";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url_sante));
                 startActivity(intent);

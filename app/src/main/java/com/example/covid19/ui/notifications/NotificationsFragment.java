@@ -37,7 +37,7 @@ public class NotificationsFragment extends Fragment {
 
         Button sBtn = root.findViewById(R.id.search_btn);
 
-        final TextView country =root.findViewById(R.id.county1);
+        final TextView country =root.findViewById(R.id.county);
         final TextView cases=root.findViewById(R.id.info_cases1);
         final TextView death = root.findViewById(R.id.info_death1);
         final TextView recover_critical = root.findViewById(R.id.info_critical1);

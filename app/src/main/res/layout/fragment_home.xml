@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="391dp"
-        android:layout_height="543dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="393dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
@@ -176,8 +176,8 @@
                 <ImageView
                     android:id="@+id/image_src"
                     android:layout_width="match_parent"
-                    android:layout_height="138dp"
-                    android:background="#81673AB7"
+                    android:layout_height="200dp"
+                    android:background="#2196F3"
                     tools:src="@drawable/docotor_advice" />
 
                 <TextView
@@ -192,7 +192,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:background="#F0F2F2F7"
-                    android:text="sante.gov.ma" />
+                    android:text="sante.gov.ma"
+                    android:textColor="#03A9F4" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

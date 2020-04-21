@@ -7,8 +7,8 @@
     android:background="#F2F2F7">
 
     <RelativeLayout
-        android:layout_width="407dp"
-        android:layout_height="153dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="4dp"
@@ -17,49 +17,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="394dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingLeft="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/county1"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:paddingLeft="10dp"
-                android:textColor="#000000"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/black" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
 
-            <TextView
-                android:id="@+id/info_cases1"
-                android:layout_width="match_parent"
-                android:layout_height="33dp"
-                android:paddingLeft="10dp"
-                android:text="cases: 25434 | today : 74 | active 624 |"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/county1"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/info_death1"
-                android:layout_width="match_parent"
-                android:layout_height="33dp"
-                android:paddingLeft="10dp"
-                android:text="death: 25434 | today : 35"
-                android:textSize="18sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/black" />
 
-            <TextView
-                android:id="@+id/info_critical1"
-                android:layout_width="match_parent"
-                android:layout_height="33dp"
-                android:paddingLeft="10dp"
-                android:text="recovered: 25434 | Critical : 74 "
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/info_cases1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="cases: 25434 | today : 74 | active 624 |"
+                    android:textSize="18sp" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/info_death1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="death: 25434 | today : 35"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/info_critical1"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:paddingLeft="10dp"
+                    android:text="recovered: 25434 | Critical : 74 "
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
